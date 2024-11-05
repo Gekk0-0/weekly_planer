@@ -1,0 +1,145 @@
+body {
+    font-family: Trattatello, fantasy;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: "Trattatello";
+    src: url("https://db.onlinewebfonts.com/t/05289e866fe7e1e99d27a7a31f8d3b66.eot");
+    src: url("https://db.onlinewebfonts.com/t/05289e866fe7e1e99d27a7a31f8d3b66.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/05289e866fe7e1e99d27a7a31f8d3b66.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/05289e866fe7e1e99d27a7a31f8d3b66.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/05289e866fe7e1e99d27a7a31f8d3b66.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/05289e866fe7e1e99d27a7a31f8d3b66.svg#Trattatello") format("svg");
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-family: "Trattatello", fantasy;
+    font-size: 3em;
+    margin: 0;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.weekly-plan {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    padding: 20px;
+    height: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    border: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.week-days {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    justify-content: start;
+    width: 100%;
+    height: 400px;
+}
+
+.week-days .day {
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    min-height: 265px;
+}
+
+.week-days .monday,
+.week-days .tuesday,
+.week-days .wednesday {
+    grid-row: 1;
+}
+
+.week-days .thursday,
+.week-days .friday,
+.week-days .saturday {
+    grid-column: span 1;
+}
+
+.week-days .sunday {
+    grid-column: span 3;
+    min-height: 150px;
+}
+
+.week-days .day textarea {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: none; 
+    outline: none;
+    resize: vertical;
+    line-height: 1;
+    background-color: #f7f7f7;
+    font-family: Trattatello, fantasy;
+    font-size: 14px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+.notes {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    height: 100%;
+}
+
+.note-section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    min-height: 200px;
+}
+
+.note-section:last-child {
+    margin-right: 0;
+}
+
+.note-section textarea {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: none; 
+    outline: none;
+    resize: vertical;
+    line-height: 1;
+    background-color: #f7f7f7;
+    font-family: Trattatello, fantasy;
+    font-size: 14px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
